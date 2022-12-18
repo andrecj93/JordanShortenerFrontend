@@ -11,10 +11,10 @@
             {{ new Date().getFullYear() }}, made with
             <i class="fa fa-heart"></i> by
             <a
-              href="https://www.creative-tim.com"
+              :href="$router.resolve({ name: 'ShortenerWizard' }).href"
               class="font-weight-bold"
               target="_blank"
-              >Creative Tim</a
+              >The URL Hub team</a
             >
             for a better web.
           </div>

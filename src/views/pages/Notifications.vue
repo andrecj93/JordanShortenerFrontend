@@ -137,7 +137,7 @@
     <div class="position-fixed bottom-1 end-1 z-index-2">
       <material-snackbar
         v-if="snackbar === 'success'"
-        title="Material Dashboard"
+        title="URL Hub"
         date="11 mins ago"
         description="Hello, world! This is a notification message."
         :icon="{ component: 'done', color: 'white' }"
@@ -146,7 +146,7 @@
       />
       <material-snackbar
         v-if="snackbar === 'info'"
-        title="Material Dashboard"
+        title="URL Hub"
         date="11 mins ago"
         description="Hello, world! This is a notification message."
         :icon="{ component: 'notifications', color: 'white' }"
@@ -155,7 +155,7 @@
       />
       <material-snackbar
         v-if="snackbar === 'warning'"
-        title="Material Dashboard"
+        title="URL Hub"
         date="11 mins ago"
         description="Hello, world! This is a notification message."
         :icon="{ component: 'travel_explore', color: 'white' }"
@@ -164,7 +164,7 @@
       />
       <material-snackbar
         v-if="snackbar === 'danger'"
-        title="Material Dashboard"
+        title="URL Hub"
         date="11 mins ago"
         description="Hello, world! This is a notification message."
         :icon="{ component: 'campaign', color: 'white' }"

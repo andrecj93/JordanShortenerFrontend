@@ -9,7 +9,7 @@
         class="navbar-brand font-weight-bolder ms-lg-0 ms-3"
         :class="darkMode ? 'text-black' : 'text-white'"
         to="/"
-        >Material Dashboard 2 PRO</router-link
+        >URL Hub</router-link
       >
       <button
         class="shadow-none navbar-toggler ms-2"
@@ -519,6 +519,21 @@
                   >
                     <router-link
                       class="py-2 dropdown-item ps-3 border-radius-md"
+                      :to="{ name: 'ShortenerWizard' }"
+                    >
+                      <div class="d-flex align-items-center text-dark">
+                        <i class="material-icons opacity-6 me-2 text-md"
+                          >url_shortener</i
+                        >
+                        URL Shortener
+                      </div>
+                    </router-link>
+                  </li>
+                  <li
+                    class="p-0 border-0 nav-item dropdown dropdown-hover dropdown-subitem list-group-item"
+                  >
+                    <router-link
+                      class="py-2 dropdown-item ps-3 border-radius-md"
                       :to="{ name: 'Kanban' }"
                     >
                       <div class="d-flex align-items-center text-dark">
@@ -579,6 +594,17 @@
               <!-- responsive -->
               <div class="row d-lg-none">
                 <div class="col-md-12">
+                   <router-link
+                    class="py-2 ps-3 border-radius-md"
+                    :to="{ name: 'ShortenerWizard' }"
+                  >
+                    <div class="d-flex align-items-center text-dark">
+                      <i class="material-icons opacity-6 me-2 text-md"
+                        >url_shortener</i
+                      >
+                      URL Shortener
+                    </div>
+                  </router-link>
                   <router-link
                     class="py-2 ps-3 border-radius-md"
                     :to="{ name: 'Kanban' }"
@@ -601,6 +627,7 @@
                       Wizard
                     </div>
                   </router-link>
+                  
                   <router-link
                     class="py-2 ps-3 border-radius-md"
                     :to="{ name: 'Data Tables' }"

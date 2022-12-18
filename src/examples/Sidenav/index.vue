@@ -24,7 +24,7 @@
           alt="main_logo"
         />
         <span class="ms-1 font-weight-bold text-white"
-          >Material Dashboard 2 PRO</span
+          >URL Hub</span
         >
       </router-link>
     </div>

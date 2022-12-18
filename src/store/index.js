@@ -9,7 +9,7 @@ export default createStore({
     sidebarType: "bg-gradient-dark",
     isRTL: false,
     color: "success",
-    isNavFixed: false,
+    isNavFixed: true,
     isAbsolute: false,
     showNavs: true,
     showSidenav: true,

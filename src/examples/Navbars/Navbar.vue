@@ -235,7 +235,8 @@ export default {
   computed: {
     ...mapState(["isRTL", "isAbsolute"]),
     currentRouteName() {
-      return this.$route.name;
+      console.log("route name", this.$route)
+      return this.$route.name ?? "Home";
     },
   },
   created() {

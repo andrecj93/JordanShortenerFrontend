@@ -14,27 +14,29 @@
       :placeholder="placeholder"
       :isRequired="isRequired"
       :disabled="disabled"
+      :readonly="readonly"
+      @input="$emit('input', $event)"
     />
   </div>
 </template>
 
 <script>
-import setMaterialInput from "@/assets/js/material-input.js";
+import setMaterialInput from '@/assets/js/material-input.js';
 
 export default {
-  name: "MaterialInput",
+  name: 'MaterialInput',
   props: {
     variant: {
       type: String,
-      default: "outline",
+      default: 'outline',
     },
     label: {
       type: String,
-      default: "",
+      default: '',
     },
     size: {
       type: String,
-      default: "default",
+      default: 'default',
     },
     success: {
       type: Boolean,
@@ -50,7 +52,7 @@ export default {
     },
     name: {
       type: String,
-      default: "",
+      default: '',
     },
     id: {
       type: String,
@@ -58,21 +60,26 @@ export default {
     },
     value: {
       type: String,
-      default: "",
+      default: '',
     },
     placeholder: {
       type: String,
-      default: "",
+      default: '',
     },
     type: {
       type: String,
-      default: "text",
+      default: 'text',
+    },
+    readonly: {
+      type: Boolean,
+      default: false,
     },
     isRequired: {
       type: Boolean,
       default: false,
     },
   },
+emits: ['input'],
   mounted() {
     setMaterialInput();
   },
@@ -88,9 +95,9 @@ export default {
       let isValidValue;
 
       if (success) {
-        isValidValue = "is-valid";
+        isValidValue = 'is-valid';
       } else if (error) {
-        isValidValue = "is-invalid";
+        isValidValue = 'is-invalid';
       } else {
         isValidValue = null;
       }

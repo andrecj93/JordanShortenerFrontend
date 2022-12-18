@@ -7,11 +7,11 @@
       <li class="nav-item" :class="getRoute() === 'dashboards' ? 'active' : ''">
         <sidenav-collapse
           collapse-ref="brooklynAlice"
-          nav-text="Brooklyn Alice"
+          nav-text="André Jordão"
           :class="getRoute() === 'brooklynAlice' ? 'active' : ''"
         >
           <template #icon>
-            <img src="../../assets/img/team-3.jpg" class="avatar" />
+            <img src="../../assets/img/team-4.jpg" class="avatar" />
           </template>
           <template #list>
             <ul class="nav pe-0">
@@ -191,7 +191,11 @@
           <template #list>
             <ul class="nav pe-0">
               <!-- nav links -->
-
+              <sidenav-item
+                :to="{ name: 'ShortenerWizard' }"
+                mini-icon="U"
+                text="URL Shortener"
+              />
               <sidenav-item
                 :to="{ name: 'Kanban' }"
                 mini-icon="K"
@@ -795,32 +799,32 @@
   </div>
 </template>
 <script>
-import SidenavItem from "./SidenavItem.vue";
-import SidenavCollapse from "./SidenavCollapse.vue";
-import SidenavCollapseItem from "./SidenavCollapseItem.vue";
-import { mapState } from "vuex";
+import SidenavItem from './SidenavItem.vue';
+import SidenavCollapse from './SidenavCollapse.vue';
+import SidenavCollapseItem from './SidenavCollapseItem.vue';
+import { mapState } from 'vuex';
 export default {
-  name: "SidenavList",
+  name: 'SidenavList',
   components: {
     SidenavItem,
     SidenavCollapse,
-    SidenavCollapseItem
+    SidenavCollapseItem,
   },
   data() {
     return {
-      title: "Soft UI Dashboard PRO",
-      controls: "dashboardsExamples",
-      isActive: "active"
+      title: 'Soft UI Dashboard PRO',
+      controls: 'dashboardsExamples',
+      isActive: 'active',
     };
   },
   computed: {
-    ...mapState(["isRTL"])
+    ...mapState(['isRTL']),
   },
   methods: {
     getRoute() {
-      const routeArr = this.$route.path.split("/");
+      const routeArr = this.$route.path.split('/');
       return routeArr[1];
-    }
-  }
+    },
+  },
 };
 </script>
